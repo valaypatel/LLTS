@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title"
+			android:text="@string/company_information"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/TitleBar"
+		android:layout_centerHorizontal="true" android:layout_marginTop="25dip"
+		android:id="@+id/CompanyInfo">
+		<LinearLayout android:id="@+id/Content"
+			android:orientation="vertical" android:paddingBottom="10dip"
+			android:layout_height="fill_parent" android:paddingTop="10dip"
+			android:layout_width="300dip">
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:id="@+id/Content1" android:layout_width="match_parent">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_name" android:layout_width="wrap_content" android:id="@+id/NameTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/Name" android:singleLine="true"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:id="@+id/Content2" android:layout_width="match_parent">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_address" android:layout_width="wrap_content" android:id="@+id/AddressTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="3" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/Address"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:id="@+id/Content3" android:layout_width="match_parent">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_city" android:layout_width="wrap_content" android:id="@+id/CityTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/City" android:singleLine="true"></EditText>
+			</RelativeLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:paddingBottom="10dip"
+			android:layout_height="fill_parent" android:paddingTop="10dip"
+			android:layout_width="300dip" android:id="@+id/Content">
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/Content4">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_state" android:layout_width="wrap_content" android:id="@+id/StateTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/State" android:singleLine="true"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/Content5">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_zip" android:layout_width="wrap_content" android:id="@+id/ZipTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/Zip" android:singleLine="true" android:phoneNumber="true"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/Content6">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_phone" android:layout_width="wrap_content" android:id="@+id/PhoneTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/Phone" android:singleLine="true" android:phoneNumber="true"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/Content7">
+				<TextView style="@style/FormField" android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentLeft="true" android:text="@string/company_Location" android:layout_width="wrap_content" android:id="@+id/LocationTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_centerVertical="true"
+					android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/Location" android:singleLine="true"></EditText>
+			</RelativeLayout>
+		</LinearLayout>
+	</LinearLayout>
+	<RelativeLayout android:gravity="center"
+		android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+		android:layout_height="wrap_content" android:id="@+id/SaveContent"
+		android:layout_width="600dip" android:layout_below="@id/CompanyInfo" android:layout_centerHorizontal="true">
+		<Button android:layout_height="wrap_content" android:text="@string/save"
+			android:layout_width="wrap_content" android:id="@+id/Save"></Button>
+		<Button android:layout_height="wrap_content" android:text="@string/cancle"
+			android:layout_width="wrap_content" android:layout_toRightOf="@id/Save"
+			android:id="@+id/Cancle"></Button>
+	</RelativeLayout>
+</RelativeLayout>
+
+

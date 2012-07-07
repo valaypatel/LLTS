@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title" android:text="@string/information"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<LinearLayout android:orientation="vertical" android:id="@+id/ShifOrDayView" android:layout_below="@id/TitleBar" android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<RadioGroup android:layout_width="fill_parent" android:gravity="center" android:id="@+id/ShiftOrDayGroup" android:orientation="horizontal" android:layout_height="wrap_content" android:layout_margin="10dip">
+			<RadioButton android:layout_width="wrap_content" android:id="@+id/DayClose" android:layout_margin="5dip" android:text="Day Close" android:layout_height="wrap_content" android:checked="true"></RadioButton>
+			<RadioButton android:id="@+id/ShiftClose" android:layout_margin="5dip" android:text="Shift Close" android:layout_width="wrap_content" android:layout_height="wrap_content"></RadioButton>
+		</RadioGroup>
+		<LinearLayout android:layout_width="match_parent" android:gravity="center" android:layout_height="wrap_content" android:layout_margin="10dip" android:id="@+id/ShiftValueView">
+			<TextView android:text="Number of Shift in a Day" android:layout_width="wrap_content" style="@style/FormField" android:id="@+id/NumberofShiftTxt" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_weight="1" android:inputType="number" android:layout_height="wrap_content" android:id="@+id/NumberofShift" android:layout_width="wrap_content"></EditText>
+		</LinearLayout>
+		<LinearLayout android:layout_width="match_parent" android:id="@+id/LinearLayout01" android:gravity="center" android:layout_height="wrap_content" android:layout_margin="10dip">
+			<Button android:id="@+id/Save" android:layout_width="wrap_content" android:text="@string/save" android:layout_height="wrap_content"></Button>
+			<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Cancle" android:text="@string/cancle"></Button>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
+
+

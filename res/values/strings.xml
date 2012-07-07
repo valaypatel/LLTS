@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="quit">Quit</string>
+	<string name="app_name">Leasur Life Transit System</string>
+	<string name="login">Login</string>
+	<string name="username">Username</string>
+	<string name="password">Password</string>
+	<string name="remember_me">Remember Me</string>
+	<string name="menu_view">Menu</string>
+	<string name="menu1">Administration</string>
+	<string name="menu2">Route and Ticket </string>
+	<string name="menu3">Shift or Day Closing</string>
+	<string name="menu4">Reports</string>
+	<string name="menu5">Database Management</string>
+	<string name="menu6">Settings</string>
+	<string name="administration_view">Administration</string>
+	<string name="route_and_ticket_view">Route and Ticket Management</string>
+	<string name="shift_or_day_closing">Shift Or Day Closing</string>
+	<string name="company_information">Company Information</string>
+	<string name="ticket_pack_information">Ticket Pack Information</string>
+	<string name="first_day_of_week">First Day of Week</string>
+	<string name="user_management">User Management</string>
+	<string name="information">Shift Information</string>
+	<string name="open_new_pack">Open new Pack</string>
+	<string name="report_view">Reports</string>
+	<string name="open_discontinued_pack_or_close_unsold_pack">Open Discontinued Pack or Close Unsold pack
+	</string>
+	<string name="close_packs">Close Packs</string>
+	<string name="shift_closing">Shift Closing</string>
+	<string name="day_closing">Day Closing</string>
+	<string name="add">Add</string>
+	<string name="admin">Admin</string>
+	<string name="sales_clerk">Sales Clerk</string>
+	<string name="manager">Manager</string>
+	<string name="ticket_price">Ticket Price</string>
+
+	<!-- Form Fields -->
+
+	<string name="company_name">Name</string>
+	<string name="company_address">Address</string>
+	<string name="company_city">City</string>
+	<string name="company_state">State</string>
+	<string name="company_phone">Phone</string>
+	<string name="company_zip">Zip</string>
+	<string name="company_Location">Location</string>
+	<string name="save">Save</string>
+	<string name="cancle">Cancel</string>
+	<string name="value_pack">Value Pack</string>
+	<string name="currency">$</string>
+	<string name="digit_in_barcode">Digit in Barcode</string>
+
+	<string name="barcode">Pack Barcode</string>
+	<string name="route_name">Route Name</string>
+	<string name="route_no">Route No</string>
+	<string name="serial_no">Serial No</string>
+	<string name="ticket_no">Ticket No</string>
+	<string name="slot_no">Slot No</string>
+	<string name="open_close">Open/Close</string>
+	<string name="open">Open</string>
+	<string name="close">Close</string>
+
+
+	<string name="state_prompt">Choose a State</string>
+	<string-array name="state_array">
+		<item>AL</item>
+		<item>AK</item>
+		<item>AZ</item>
+		<item>AR</item>
+		<item>CA</item>
+		<item>CO</item>
+		<item>CT</item>
+		<item>DE</item>
+		<item>FL</item>
+		<item>GA</item>
+		<item>HI</item>
+		<item>ID</item>
+		<item>IL</item>
+		<item>IN</item>
+		<item>IA</item>
+		<item>KS</item>
+		<item>KY</item>
+		<item>LA</item>
+		<item>ME</item>
+		<item>MD</item>
+		<item>MA</item>
+		<item>MI</item>
+		<item>MN</item>
+		<item>MS</item>
+		<item>MO</item>
+		<item>MT</item>
+		<item>NE</item>
+		<item>NV</item>
+		<item>NH</item>
+		<item>NJ</item>
+		<item>NM</item>
+		<item>NY</item>
+		<item>NC</item>
+		<item>ND</item>
+		<item>OH</item>
+		<item>OK</item>
+		<item>OR</item>
+		<item>PA</item>
+		<item>RI</item>
+		<item>SC</item>
+		<item>SD</item>
+		<item>TN</item>
+		<item>TX</item>
+		<item>UT</item>
+		<item>VT</item>
+		<item>VA</item>
+		<item>WA</item>
+		<item>WV</item>
+		<item>WI</item>
+		<item>WY</item>
+	</string-array>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.LLTS"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.Light.NoTitleBar">
+        <activity android:name=".LLTS"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_view" android:name="MenuView"></activity>
+        <activity android:name="Administration" android:label="@string/administration_view"></activity>
+        <activity android:label="@string/route_and_ticket_view" android:name="RouteAndTicket"></activity>
+        <activity android:name="ShiftOrDayClosing" android:label="@string/shift_or_day_closing"></activity>
+        <activity android:label="@string/company_information" android:name="CompanyInformation"></activity>
+        <activity android:label="@string/ticket_pack_information" android:name="TicketPackInformation"></activity>
+        <activity android:label="@string/user_management" android:name="UserManagement"></activity>
+        <activity android:label="@string/information" android:name="Information"></activity>
+        <activity android:label="@string/close_packs" android:name="ClosePacks"></activity>
+        <activity android:label="@string/open_discontinued_pack_or_close_unsold_pack" android:name="OpenDiscontinuedPackOrCloseUnsoldpack"></activity>
+        <activity android:label="@string/open_new_pack" android:name="OpenNewPack"></activity>
+        <activity android:label="@string/shift_closing" android:name="ShiftClosing"></activity>
+        <activity android:label="@string/day_closing" android:name="DayClosing"></activity>
+        <activity android:label="@layout/report_view" android:name="ReportView"></activity>
+
+    </application>
+</manifest>

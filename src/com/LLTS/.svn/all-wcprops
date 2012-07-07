@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/llts/!svn/ver/2/trunk/src/com/LLTS
+END
+CompanyInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/llts/!svn/ver/6/trunk/src/com/LLTS/CompanyInformation.java
+END
+OpenNewPack.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/OpenNewPack.java
+END
+LLTS.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/llts/!svn/ver/9/trunk/src/com/LLTS/LLTS.java
+END
+UserManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/llts/!svn/ver/9/trunk/src/com/LLTS/UserManagement.java
+END
+Administration.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/Administration.java
+END
+Information.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/Information.java
+END
+RouteAndTicket.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/llts/!svn/ver/4/trunk/src/com/LLTS/RouteAndTicket.java
+END
+OpenDiscontinuedPackOrCloseUnsoldpack.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/llts/!svn/ver/4/trunk/src/com/LLTS/OpenDiscontinuedPackOrCloseUnsoldpack.java
+END
+DayClosing.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/llts/!svn/ver/4/trunk/src/com/LLTS/DayClosing.java
+END
+ReportView.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/ReportView.java
+END
+TicketPackInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/llts/!svn/ver/6/trunk/src/com/LLTS/TicketPackInformation.java
+END
+MenuView.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/llts/!svn/ver/9/trunk/src/com/LLTS/MenuView.java
+END
+ShiftClosing.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/ShiftClosing.java
+END
+ClosePacks.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/ClosePacks.java
+END

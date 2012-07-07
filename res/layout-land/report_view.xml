@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title" android:text="@string/report_view"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/ScanPack"
+		android:layout_below="@id/TitleBar" android:layout_centerHorizontal="true"
+		android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<RelativeLayout android:layout_height="wrap_content" android:id="@+id/ReportInfo" android:layout_width="fill_parent">
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dip" style="@style/FormField" android:layout_alignParentLeft="true" android:id="@+id/ReportDateTxt" android:text=" Report Date :"></TextView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FormField" android:id="@+id/ReportDate" android:layout_toRightOf="@id/ReportDateTxt" android:text="Date"></TextView>
+			
+		</RelativeLayout>
+		<TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/ReportInfo" android:id="@+id/ReportTableHeader">
+				<TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dip" android:gravity="center" android:id="@+id/ReportHeader">
+					<TextView android:id="@+id/SlotNumberTxt" android:layout_height="wrap_content" android:text="Slot No." android:layout_width="50dip" android:gravity="center" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_marginLeft="5dip" android:layout_height="wrap_content" android:text="Route No." android:id="@+id/RouteNumberTxt" android:layout_width="60dip" android:gravity="center" android:textColor="#FFFFFF"></TextView>
+					<TextView android:id="@+id/RouteNameTxt" android:layout_marginLeft="5dip" android:layout_height="wrap_content" android:text="Route Name" android:layout_width="90dip" android:gravity="center" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_marginLeft="5dip" android:layout_height="wrap_content" android:layout_width="80dip" android:id="@+id/SerialNumberTxt" android:text="Pack No." android:gravity="center" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_marginLeft="5dip" android:layout_height="wrap_content" android:layout_width="80dip" android:gravity="center" android:text="Open" android:id="@+id/Open" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_width="80dip" android:layout_marginLeft="5dip" android:gravity="center" android:layout_height="wrap_content" android:id="@+id/Close" android:text="Close" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_width="80dip" android:layout_marginLeft="5dip" android:gravity="center" android:layout_height="wrap_content" android:id="@+id/TicketSold" android:text="Ticket Sold" android:textColor="#FFFFFF"></TextView>
+					<TextView android:layout_width="80dip" android:layout_marginLeft="5dip" android:gravity="center" android:layout_height="wrap_content" android:text="Total $" android:id="@+id/Total" android:textColor="#FFFFFF"></TextView>
+				</TableRow>
+			</TableLayout>
+		<ScrollView android:layout_height="match_parent" android:layout_width="match_parent" android:layout_below="@id/ReportTableHeader" android:id="@+id/ReportList">
+			<TableLayout android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/ReportTable">
+			</TableLayout>
+			
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>
+
+

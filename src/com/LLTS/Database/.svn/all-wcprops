@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/llts/!svn/ver/5/trunk/src/com/LLTS/Database
+END
+TicketPackInformationDatabaseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/llts/!svn/ver/5/trunk/src/com/LLTS/Database/TicketPackInformationDatabaseHolder.java
+END
+PlistHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/llts/!svn/ver/5/trunk/src/com/LLTS/Database/PlistHelper.java
+END
+RouteInformationDatabaseHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/llts/!svn/ver/6/trunk/src/com/LLTS/Database/RouteInformationDatabaseHelper.java
+END
+DailySalesDatabaseHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/Database/DailySalesDatabaseHelper.java
+END
+PackInformationDatabaseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/Database/PackInformationDatabaseHolder.java
+END
+CompanyInformationDatabaseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/llts/!svn/ver/5/trunk/src/com/LLTS/Database/CompanyInformationDatabaseHolder.java
+END
+UserManagementDatabaseHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/llts/!svn/ver/5/trunk/src/com/LLTS/Database/UserManagementDatabaseHolder.java
+END
+InventoryDatabaseHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/llts/!svn/ver/6/trunk/src/com/LLTS/Database/InventoryDatabaseHelper.java
+END
+DatabaseManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/llts/!svn/ver/8/trunk/src/com/LLTS/Database/DatabaseManager.java
+END

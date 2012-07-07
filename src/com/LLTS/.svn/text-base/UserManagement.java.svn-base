@@ -1,0 +1,245 @@
+package com.LLTS;
+
+
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.LLTS.Database.DatabaseManager;
+import com.LLTS.Database.UserManagementDatabaseHolder;
+
+public class UserManagement extends Activity {
+
+	TableLayout tableLayout;
+	Button add;
+	Button cancle;
+	
+	EditText userName;
+	EditText password;
+	RadioGroup userType;
+	RadioButton admin;
+	RadioButton salesClerk;
+	RadioButton manager;
+	
+	DatabaseManager dbManager;
+	int userCount;
+	UserManagementDatabaseHolder users[];
+	
+	boolean isEditing ;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.user_management);
+		dbManager = new DatabaseManager(getApplicationContext());
+		tableLayout = (TableLayout)findViewById(R.id.UserTable);
+		add = (Button) findViewById (R.id.Add);
+		cancle = (Button) findViewById(R.id.Cancle);
+		add.setOnClickListener(new MyOnClickListener());
+		cancle.setOnClickListener(new MyOnClickListener());
+		userName = (EditText)findViewById(R.id.UserName);
+		password = (EditText)findViewById(R.id.Password);		
+		userType = (RadioGroup)findViewById(R.id.UserTypeGroup);
+		admin= (RadioButton)findViewById(R.id.Admin);
+		salesClerk= (RadioButton)findViewById(R.id.SalesClark);
+		manager= (RadioButton)findViewById(R.id.Manager);
+		dbManager.open();
+		userCount = dbManager.getNumberofUsers();		
+		dbManager.close();
+		if(userCount>0) {
+			//users = new UserManagementDatabaseHolder[userCount];
+			dbManager.open();
+			users = dbManager.getUsers();		
+			dbManager.close();
+			setUserList(users);
+		}
+		isEditing=false;
+		
+    	
+	}
+	public void setUserList(UserManagementDatabaseHolder users[]) {
+		
+		TableRow tableRow;
+    	TextView userNameText;
+    	TextView userTypeText;
+    	ImageView deleteButton;
+    	tableLayout.removeAllViews();
+		for(UserManagementDatabaseHolder user:users ) {
+			
+			tableRow = new TableRow(getApplicationContext());
+			userNameText = new TextView(getApplicationContext());
+			userTypeText = new TextView(getApplicationContext());
+			deleteButton = new ImageView(getApplicationContext());
+			tableRow.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
+			userNameText.setText(user.getUserNameValue());
+			userNameText.setPadding(15, 0, 0, 0);
+			userNameText.setTextSize(22);
+			userNameText.setTextColor(Color.BLACK);
+			userNameText.setWidth(250);
+			userTypeText.setText(user.getGroupValue());
+			userTypeText.setTextSize(14);
+			userTypeText.setTextColor(Color.WHITE);
+			userTypeText.setWidth(100);
+			deleteButton.setImageResource(R.drawable.delete);
+			deleteButton.setTag(user);
+			deleteButton.setOnClickListener(new MyDeleteButtonClickListerer());
+			deleteButton.setPadding(5, 0, 0, 0);
+			tableRow.addView(deleteButton, 0);
+			tableRow.addView(userNameText, 1);
+			tableRow.addView(userTypeText, 2);
+			tableRow.setPadding(10, 7, 10, 7);
+			tableRow.setGravity(Gravity.CENTER_VERTICAL);
+			tableRow.setTag(user);
+			tableRow.setOnLongClickListener(new MyEditClickListener());
+			tableLayout.addView(tableRow);
+		}
+
+	}
+	public class MyOnClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			if(v.getId()==R.id.Add)
+				saveInfo();
+			else if(v.getId()==R.id.Cancle)
+				finish();
+			else
+				return;
+		}
+		
+		
+	}
+	
+	public class MyEditClickListener implements OnLongClickListener {
+
+		@Override
+		public boolean onLongClick(View v) {
+			UserManagementDatabaseHolder userManagementDatabaseHolder = (UserManagementDatabaseHolder) v.getTag();
+			dbManager.open();	
+			userName.setText(userManagementDatabaseHolder.getUserNameValue());
+			password.setText(userManagementDatabaseHolder.getPasswordValue());
+			if(userManagementDatabaseHolder.getGroupValue().equals("Admin")) {
+				admin.setChecked(true);
+			}
+			else if(userManagementDatabaseHolder.getGroupValue().equals("Sales Clerk")) {
+				salesClerk.setChecked(true);
+			}
+			else {
+				manager.setChecked(true);
+			}
+			isEditing=true;
+			userCount=userManagementDatabaseHolder.getUserIDValue();
+	        dbManager.close();
+	        add.setText("Update");
+			return false;
+		}
+		
+		
+		
+	}
+	
+	public class MyDeleteButtonClickListerer implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			showConfiromation(v);
+		}
+		
+	}
+	
+	public void showConfiromation(final View v) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage("Are you sure you want to delete User").setTitle("Delete Confirmation").setCancelable(false)
+				.setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								UserManagementDatabaseHolder userManagementDatabaseHolder = (UserManagementDatabaseHolder) v.getTag();
+								dbManager.open();
+								dbManager.deleteUserName(userManagementDatabaseHolder.getUserIDValue());	
+								users = dbManager.getUsers();	
+						        dbManager.close();
+						        Toast.makeText(getApplicationContext(), "User Deleted", Toast.LENGTH_LONG).show();
+						        setUserList(users);
+							}
+						}).setNegativeButton("Cancel",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.dismiss();
+							}
+						});
+		AlertDialog alert = builder.create();
+		alert.show();		
+
+	}
+	
+	
+	public void saveInfo() {
+		
+		String toast="";
+		RadioButton rb= (RadioButton) findViewById(userType.getCheckedRadioButtonId()); 
+		dbManager.open();  
+		
+		if(dbManager.isUserNameStored(userName.getText().toString()) && !isEditing) {
+			Toast.makeText(getApplicationContext(), "Username is Already Stored !!!", Toast.LENGTH_LONG).show();
+			return;
+		}
+		dbManager.close();
+        dbManager.open();  
+        UserManagementDatabaseHolder userManagementDatabaseHolder = new UserManagementDatabaseHolder();
+        if(isEditing) {
+        	
+        	userManagementDatabaseHolder.setUserIDValue(userCount);
+            userManagementDatabaseHolder.setUserNameValue(userName.getText().toString());
+            userManagementDatabaseHolder.setPasswordValue(password.getText().toString());
+            userManagementDatabaseHolder.setGroupValue(rb.getText().toString());
+           	dbManager.updateUserInfornation(userManagementDatabaseHolder);
+           	toast="User Updated !!!";
+        }
+		else {
+			userManagementDatabaseHolder.setUserIDValue(userCount+1);
+	        userManagementDatabaseHolder.setUserNameValue(userName.getText().toString());
+	        userManagementDatabaseHolder.setPasswordValue(password.getText().toString());
+	        userManagementDatabaseHolder.setGroupValue(rb.getText().toString());
+	        if(userCount<10)
+	        	dbManager.insertUserInfornation(userManagementDatabaseHolder);
+	        else
+	        	Toast.makeText(getApplicationContext(), "Maximum 10 Users can be entered", Toast.LENGTH_LONG).show();
+	        
+	        
+	       	toast="User Saved !!!";
+	    }
+     
+    	
+        
+        Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_LONG).show();
+        users = dbManager.getUsers();	
+        userCount =dbManager.getNumberofUsers();
+        dbManager.close();
+        userName.setText("");
+        password.setText("");
+        isEditing=false;
+        add.setText("Add");
+		setUserList(users);
+        
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+	style="@style/Background" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout android:id="@+id/TitleBar" style="@style/TitleBar">
+		<TextView android:id="@+id/Title" style="@style/Title" android:text="@string/menu_view"></TextView>
+		<ImageView android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true" android:src="@drawable/icon"
+			android:layout_height="wrap_content"
+			android:id="@+id/Icon" android:layout_width="wrap_content" android:layout_marginBottom="5dip" android:layout_marginLeft="15dip" android:layout_marginRight="5dip" android:layout_marginTop="5dip"></ImageView>
+	</RelativeLayout>
+<!-- 	<ImageView android:layout_marginTop="5dip" android:layout_height="wrap_content" android:layout_marginBottom="5dip" android:src="@drawable/icon" android:id="@+id/ImageView01" android:layout_marginRight="5dip" android:layout_marginLeft="15dip" android:layout_width="wrap_content" android:layout_toLeftOf="@+id/TitleBar" android:layout_alignTop="@+id/TitleBar"></ImageView>
+	<RelativeLayout android:id="@+id/MenuFrame" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_width="fill_parent" android:layout_marginTop="55dip" android:layout_height="0dip">
+		<RelativeLayout android:id="@+id/relativeLayout1" android:layout_centerInParent="true" android:layout_width="500dip" android:layout_height="600dip">
+			<LinearLayout android:gravity="center" android:id="@+id/FirstMenuRow" android:orientation="vertical" android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_height="600dip" android:layout_width="200dip">
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu1">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem1" android:background="@drawable/admin"></ImageView>
+					<TextView android:id="@+id/MenuText1" android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:text="@string/menu1" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu2">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem2" android:background="@drawable/ticket"></ImageView>
+					<TextView android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/MenuText2" android:text="@string/menu2" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu3">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem3" android:background="@drawable/dayoff"></ImageView>
+					<TextView android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/MenuText3" android:text="@string/menu3" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:gravity="center" android:id="@+id/SecondMenuRow" android:orientation="vertical" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_height="600dip" android:layout_width="200dip">
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu4">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem4" android:background="@drawable/report"></ImageView>
+					<TextView android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/MenuText4" android:text="@string/menu4" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu5">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem5" android:background="@drawable/database"></ImageView>
+					<TextView android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/MenuText5" android:text="@string/menu5" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+				<LinearLayout android:layout_width="wrap_content" android:layout_marginBottom="25dip" android:gravity="center" android:layout_height="wrap_content" android:layout_marginTop="25dip" android:orientation="vertical" android:id="@+id/Menu6">
+					<ImageView android:layout_width="100dip" android:layout_height="100dip" android:layout_margin="10dip" android:id="@+id/MenuItem6" android:background="@drawable/setting"></ImageView>
+					<TextView android:layout_width="wrap_content" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/MenuText6" android:text="@string/menu6" style="@style/MenuLable"></TextView>
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+	</RelativeLayout> -->
+	<ListView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/TitleBar"
+		android:id="@+id/MenuList"
+		android:cacheColorHint="#00000000">
+	</ListView>
+</RelativeLayout>
+

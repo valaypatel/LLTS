@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar" android:layout_alignParentLeft="true">
+        <TextView android:id="@+id/Title" style="@style/Title" android:text="@string/route_and_ticket_view"></TextView>
+        <ImageView android:layout_marginTop="5dip" android:layout_height="wrap_content" android:layout_marginBottom="5dip" android:src="@drawable/icon" android:layout_centerVertical="true" android:id="@+id/Icon" android:layout_marginRight="5dip" android:layout_marginLeft="15dip" android:layout_width="wrap_content" android:layout_alignParentLeft="true"></ImageView>
+    </RelativeLayout>
+    <ListView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/RouteAndTicketManagementList" android:layout_below="@id/TitleBar"></ListView>
+</RelativeLayout>
+
+

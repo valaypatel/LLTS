@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title" android:text="@string/ticket_pack_information"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/Content" android:layout_below="@id/TitleBar" android:layout_width="fill_parent" android:layout_marginTop="10dip" android:layout_marginBottom="10dip">
+		<RelativeLayout android:gravity="center" android:layout_marginLeft="30dip" android:layout_marginRight="30dip" android:layout_height="wrap_content" android:id="@+id/Content1" android:layout_width="match_parent">
+			<TextView style="@style/FormField" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:id="@+id/ValuePackTxt" android:text="@string/value_pack" android:layout_width="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_width="200dip" android:id="@+id/ValuePack" android:singleLine="true" android:numeric="integer"></EditText>
+			<TextView style="@style/FormField" android:layout_height="wrap_content" android:layout_centerVertical="true" android:id="@+id/Currency" android:text="@string/currency" android:layout_width="wrap_content" android:layout_toLeftOf="@id/ValuePack"></TextView>
+		</RelativeLayout>
+		<LinearLayout android:layout_marginTop="50dip" android:layout_marginLeft="10dip" android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:id="@+id/LinearLayout01" android:layout_marginRight="10dip">
+			<TextView android:layout_height="wrap_content" android:layout_width="70dip" android:id="@+id/EditText03" android:text="Route" android:gravity="center" android:textColor="#000000" android:textSize="17dip"></TextView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Dash" style="@style/FormField" android:layout_marginLeft="12dip" android:text="-"></TextView>
+			<TextView android:layout_height="wrap_content" android:layout_width="120dip" android:id="@+id/EditText01" android:text="Serial No" android:gravity="center" android:textColor="#000000" android:textSize="17dip"></TextView>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Dash" style="@style/FormField" android:layout_marginLeft="12dip" android:text="-"></TextView>
+			<TextView android:layout_height="wrap_content" android:layout_width="100dip" android:id="@+id/EditText02" android:text="Ticket No" android:gravity="center" android:textColor="#000000" android:textSize="17dip"></TextView>
+		</LinearLayout>
+		<LinearLayout android:gravity="center" android:layout_height="wrap_content" android:id="@+id/Content2" android:layout_width="match_parent" android:layout_marginLeft="10dip" android:layout_marginRight="10dip">
+			<EditText android:layout_height="wrap_content" android:id="@+id/Group1" android:hint="Route" android:layout_width="70dip" android:singleLine="true" android:numeric="integer"></EditText>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Dash" style="@style/FormField" android:layout_marginLeft="12dip" android:text="-"></TextView>
+			<EditText android:layout_height="wrap_content"  android:id="@+id/Group2" android:layout_width="120dip" android:hint="Serial No" android:singleLine="true" android:numeric="integer"></EditText>
+			<TextView android:layout_height="wrap_content" android:text="-" android:layout_width="wrap_content" style="@style/FormField" android:id="@+id/Dash" android:layout_marginLeft="12dip"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/Group3" android:hint="Ticket No" android:layout_width="100dip" android:singleLine="true" android:numeric="integer"></EditText>
+		</LinearLayout>
+	</LinearLayout>
+	<RelativeLayout android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:id="@+id/SaveContent" android:layout_below="@id/Content">
+			<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/Save" android:text="@string/save"></Button>
+			<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Cancle" android:layout_toRightOf="@id/Save" android:text="@string/cancle"></Button>
+	</RelativeLayout>
+</RelativeLayout>
+
+

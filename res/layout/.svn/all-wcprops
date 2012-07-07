@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/llts/!svn/ver/2/trunk/res/layout
+END
+rout_and_ticket.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/llts/!svn/ver/4/trunk/res/layout/rout_and_ticket.xml
+END
+user_management.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/llts/!svn/ver/6/trunk/res/layout/user_management.xml
+END
+shift_closing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/llts/!svn/ver/7/trunk/res/layout/shift_closing.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/llts/!svn/ver/7/trunk/res/layout/main.xml
+END
+ticket_pack_information.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/llts/!svn/ver/6/trunk/res/layout/ticket_pack_information.xml
+END
+company_information.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/llts/!svn/ver/6/trunk/res/layout/company_information.xml
+END
+information.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/llts/!svn/ver/8/trunk/res/layout/information.xml
+END
+open_new_pack.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/llts/!svn/ver/6/trunk/res/layout/open_new_pack.xml
+END
+administration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/llts/!svn/ver/4/trunk/res/layout/administration.xml
+END
+report_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/llts/!svn/ver/8/trunk/res/layout/report_view.xml
+END
+day_closing.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/llts/!svn/ver/4/trunk/res/layout/day_closing.xml
+END
+close_packs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/llts/!svn/ver/7/trunk/res/layout/close_packs.xml
+END
+open_discontinued_pack_or_close_unsold_pack.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/llts/!svn/ver/6/trunk/res/layout/open_discontinued_pack_or_close_unsold_pack.xml
+END
+menu_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/llts/!svn/ver/9/trunk/res/layout/menu_view.xml
+END

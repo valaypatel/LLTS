@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Background">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+<!--         <item name="android:background">@color/background_color</item> -->
+		<item name="android:background">@drawable/background</item>
+    </style>
+    <style name="TitleBar">
+<!--     	<item name="android:background">@android:drawable/bottom_bar</item> -->
+		<item name="android:background">#000000</item>
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:layout_alignParentTop">true</item>
+	</style>
+    
+    <style name="Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">18dip</item>
+        
+    </style>
+    <style name="MenuLable">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18dip</item>
+	</style>
+    <style name="SecotionHead">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">15dip</item>
+    </style>
+    
+    <style name="FormField">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:layout_marginRight">15dip</item>
+    </style>
+</resources>

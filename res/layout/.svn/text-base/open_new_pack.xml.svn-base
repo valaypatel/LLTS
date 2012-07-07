@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title"
+			android:text="@string/open_new_pack"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/ScanPack"
+		android:layout_below="@id/TitleBar" android:layout_centerHorizontal="true"
+		android:layout_height="fill_parent" android:layout_width="fill_parent">
+		<RelativeLayout android:layout_centerInParent="true"
+			android:id="@+id/Content" android:layout_width="fill_parent"
+			android:layout_marginTop="10dip" android:layout_height="wrap_content">
+			<LinearLayout android:layout_height="wrap_content"
+				android:id="@+id/BarcodeContent" android:layout_width="fill_parent"
+				android:layout_marginTop="10dip">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/PackBarcode"
+					android:text="@string/barcode" android:layout_alignParentLeft="true"
+					style="@style/MenuLable" android:layout_marginLeft="10dip"
+					android:layout_marginRight="10dip"></TextView>
+				<EditText android:layout_height="wrap_content" android:id="@+id/Barcode"
+					android:layout_width="fill_parent" android:layout_toRightOf="@id/PackBarcode"
+					android:layout_marginRight="10dip" android:lines="1" android:singleLine="true" android:phoneNumber="true">
+					<requestFocus></requestFocus>
+				</EditText>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_below="@id/BarcodeContent"
+				android:id="@+id/BarcodeDetail" android:layout_height="120dip"
+				android:layout_marginTop="5dip">
+				<LinearLayout android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical" android:layout_height="40dip" android:id="@+id/RouteNameView">
+					<TextView android:layout_height="wrap_content" style="@style/FormField"
+						android:layout_marginRight="10dip" android:text="@string/route_no"
+						android:id="@+id/RouteNoTxt" android:layout_marginLeft="30dip"
+						android:layout_width="100dip"></TextView>
+					<TextView android:layout_height="wrap_content" style="@style/FormField"
+						android:id="@+id/RouteNumber" android:text="000"
+						android:layout_width="35dip"></TextView>
+					<TextView android:layout_height="wrap_content" style="@style/FormField"
+						android:layout_marginRight="10dip" android:text="@string/route_name"
+						android:id="@+id/RouteNameTxt" android:layout_width="100dip"></TextView>
+					<EditText android:layout_weight="1" android:layout_height="wrap_content"
+						android:layout_width="fill_parent" android:layout_marginRight="30dip"
+						android:id="@+id/RouteName" android:singleLine="true">
+
+					</EditText>
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical" android:layout_height="40dip" android:id="@+id/SerialNoView">
+					<TextView style="@style/FormField" android:text="@string/serial_no"
+						android:layout_marginLeft="30dip" android:layout_width="100dip"
+						android:layout_height="wrap_content" android:id="@+id/SerialNoTxt"
+						android:layout_marginRight="10dip"></TextView>
+					<TextView style="@style/FormField" android:layout_height="wrap_content"
+						android:id="@+id/SerialNo" android:text="00000000"
+						android:layout_width="85dip"></TextView>
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical" android:layout_height="40dip" android:id="@+id/TicketNoView">
+					<TextView style="@style/FormField" android:text="@string/ticket_no"
+						android:layout_marginLeft="30dip" android:layout_width="100dip"
+						android:layout_height="wrap_content" android:id="@+id/TicketNoTxt"
+						android:layout_marginRight="10dip"></TextView>
+					<TextView style="@style/FormField" android:layout_height="wrap_content"
+						android:id="@+id/TicketNo" android:layout_width="85dip"
+						android:text="000"></TextView>
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/SlotDetail"
+				android:layout_below="@id/BarcodeDetail" android:gravity="center">
+				<TextView android:layout_height="wrap_content" style="@style/MenuLable" android:layout_width="wrap_content" android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:text="@string/ticket_price" android:id="@+id/TicketValueTxt"></TextView>
+				<EditText android:layout_weight="1" android:layout_height="wrap_content" android:lines="1" android:id="@+id/TicketValue" android:singleLine="true" android:layout_width="15dip" android:numeric="integer"></EditText>
+				<TextView style="@style/MenuLable"
+					android:layout_marginLeft="10dip" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_marginRight="10dip"
+					android:text="@string/slot_no" android:id="@+id/SlotNoTxt"></TextView>
+				<EditText android:layout_height="wrap_content"
+					android:lines="1" android:layout_width="100dip" android:id="@+id/SlotNo" android:singleLine="true" android:numeric="integer"></EditText>
+			</LinearLayout>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:gravity="center"
+				android:layout_below="@id/SlotDetail"
+				android:layout_marginTop="15dip" android:id="@+id/SaveView">
+				<Button android:layout_height="wrap_content" android:layout_width="100dip" android:id="@+id/Open" android:text="@string/open"></Button>
+				<Button android:layout_width="100dip" android:layout_height="wrap_content"
+					android:text="@string/cancle" android:id="@+id/Cancle"></Button>
+			</LinearLayout>
+		</RelativeLayout>
+
+	</RelativeLayout>
+</RelativeLayout>
+
+

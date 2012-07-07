@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/Background"
+	android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout style="@style/TitleBar" android:id="@+id/TitleBar"
+		android:layout_alignParentLeft="true">
+		<TextView android:id="@+id/Title" style="@style/Title"
+			android:text="@string/user_management"></TextView>
+		<ImageView android:layout_marginTop="5dip"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dip"
+			android:src="@drawable/icon" android:layout_centerVertical="true"
+			android:id="@+id/Icon" android:layout_marginRight="5dip"
+			android:layout_marginLeft="15dip" android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"></ImageView>
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/UserManagementContent"
+		android:layout_width="fill_parent" android:layout_height="match_parent"
+		android:orientation="vertical" android:layout_below="@id/TitleBar">
+		<ScrollView android:id="@+id/ScrollView"
+			android:layout_width="fill_parent" android:layout_height="330dip">
+			<TableLayout android:scrollbars="vertical" android:id="@+id/UserTable"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"></TableLayout>
+		</ScrollView>
+		<RelativeLayout android:id="@+id/LoginFrame"
+			android:layout_width="fill_parent" android:paddingTop="20dip"
+			android:layout_below="@id/ScrollView" android:layout_height="fill_parent"
+			android:gravity="center_horizontal">
+			<RadioGroup android:id="@+id/UserTypeGroup"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<RadioButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:id="@+id/SalesClark"
+					android:checked="true"
+					android:layout_marginLeft="5dip" android:layout_marginRight="5dip" android:text="@string/sales_clerk"></RadioButton>
+				<RadioButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:id="@+id/Admin"
+					android:layout_marginLeft="5dip"
+					android:layout_marginRight="5dip" android:text="@string/admin"></RadioButton>
+				<RadioButton android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:id="@+id/Manager"
+					android:layout_marginLeft="5dip"
+					android:layout_marginRight="5dip" android:text="@string/manager"></RadioButton>
+			</RadioGroup>
+			<TextView android:id="@+id/UsernameTxt" android:text="@string/username"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:textColor="#000000" android:textSize="11dip"
+				android:layout_marginTop="5dip" android:layout_marginLeft="5dip"
+				android:layout_below="@id/UserTypeGroup">
+			</TextView>
+			<EditText android:layout_alignParentLeft="true"
+				android:layout_height="wrap_content" android:id="@+id/UserName"
+				android:layout_below="@id/UsernameTxt" android:layout_marginLeft="5dip"
+				android:layout_marginRight="5dip" android:layout_marginTop="2dip"
+				android:layout_marginBottom="5dip" android:layout_width="200dip"
+				android:singleLine="true">
+				<requestFocus></requestFocus>
+			</EditText>
+			<TextView android:layout_marginRight="5dip"
+				android:layout_height="wrap_content" android:textSize="11dip"
+				android:layout_width="wrap_content" android:layout_marginTop="5dip"
+				android:textColor="#000000" android:layout_marginLeft="5dip"
+				android:id="@+id/PasswordTxt" android:text="@string/password"
+				android:layout_below="@id/UserName"></TextView>
+			<EditText android:layout_marginRight="5dip"
+				android:password="true" android:layout_height="wrap_content"
+				android:layout_marginTop="2dip" android:layout_marginLeft="5dip"
+				android:id="@+id/Password" android:layout_below="@id/PasswordTxt"
+				android:layout_width="200dip" android:singleLine="true"></EditText>
+			<Button android:layout_width="100dip" android:layout_height="wrap_content"
+				android:id="@+id/Add" android:layout_toRightOf="@id/UserName"
+				android:layout_below="@id/UsernameTxt" android:text="@string/add"></Button>
+			<Button android:layout_width="100dip" android:layout_height="wrap_content"
+				android:id="@+id/Cancle" android:layout_toRightOf="@id/Password"
+				android:layout_below="@id/PasswordTxt" android:text="@string/cancle"></Button>
+		</RelativeLayout>
+	</LinearLayout>
+</RelativeLayout>
+
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/llts/!svn/ver/4/trunk/res/layout-land
+END
+user_management.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/llts/!svn/ver/6/trunk/res/layout-land/user_management.xml
+END
+company_information.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/llts/!svn/ver/6/trunk/res/layout-land/company_information.xml
+END
+report_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/llts/!svn/ver/8/trunk/res/layout-land/report_view.xml
+END

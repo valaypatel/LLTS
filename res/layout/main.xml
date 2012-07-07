@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" style="@style/Background">
+	<RelativeLayout android:id="@+id/TitleBar" style="@style/TitleBar">
+		<TextView android:id="@+id/Title" style="@style/Title">
+		</TextView>
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/icon"
+			android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+			android:layout_margin="5dip" android:id="@+id/Icon"></ImageView>
+
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/LoginFrame"
+		android:layout_centerInParent="true" android:layout_height="280dip" android:layout_width="250dip" android:paddingTop="20dip">
+		<TextView android:id="@+id/UsernameTxt" android:text="@string/username"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@+id/LoginText" android:textColor="#000000"
+			android:layout_marginRight="5dip"
+			android:layout_marginTop="5dip" android:layout_marginLeft="5dip"
+			android:layout_alignParentTop="true" style="@style/FormField" android:layout_alignParentLeft="true">
+		</TextView>
+		<EditText android:layout_alignParentLeft="true"
+			android:layout_height="wrap_content" android:id="@+id/UserName"
+			android:layout_width="fill_parent" android:layout_below="@id/UsernameTxt"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="2dip" android:layout_marginBottom="10dip"
+			android:lines="1" android:singleLine="true">
+			<requestFocus></requestFocus>
+		</EditText>
+		<TextView android:layout_marginRight="5dip"
+			android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginTop="5dip"
+			android:textColor="#000000" android:layout_marginLeft="5dip"
+			android:id="@+id/PasswordTxt" android:text="@string/password"
+			android:layout_below="@id/UserName" style="@style/FormField" android:layout_alignParentLeft="true"></TextView>
+		<EditText android:layout_marginRight="5dip" android:password="true"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:layout_marginTop="2dip" android:layout_marginLeft="5dip"
+			android:id="@+id/Password" android:layout_below="@id/PasswordTxt"
+			android:lines="1" android:singleLine="true"></EditText>
+		<CheckBox android:layout_alignParentLeft="true"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:id="@+id/RememberMeChk" android:text="@string/remember_me"
+			android:layout_alignParentBottom="true" android:textColor="#000000"
+			android:layout_margin="5dip" android:textSize="13dip"></CheckBox>
+		<Button android:layout_height="wrap_content"
+			android:layout_alignParentRight="true" android:text="@string/login"
+			android:layout_alignParentBottom="true" android:layout_width="100dip"
+			android:layout_margin="5dip" android:id="@+id/UserLogin"></Button>
+	</RelativeLayout>
+</RelativeLayout>
